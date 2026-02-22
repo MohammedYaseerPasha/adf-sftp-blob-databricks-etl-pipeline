@@ -3,73 +3,51 @@
 📌 Project Overview
 
 This project demonstrates a metadata-driven Azure Data Factory (ADF) pipeline that:
-
 Ingests files from SFTP
-
 Stores them in Azure Blob Storage
-
 Identifies new files using a Stored Procedure
-
 Decrypts password-protected files using Azure Databricks
-
 Loads processed data into a database
-
 Feeds downstream Power BI reports
-
 This design ensures automation, scalability, and controlled file processing.
 
 
 🏗️ Architecture Diagram
+![decrtpy adf](https://github.com/user-attachments/assets/32fc1ba5-0e6e-46c8-8b7a-0281d5110265)
 
 
 
 🔄 End-to-End Flow Explanation
+
 Step 1 – Get Metadata from SFTP
-
 Pipeline reads file metadata from SFTP.
-
 Identifies available files for ingestion.
 
 Step 2 – ForEach: Copy SFTP to Blob
-
 Iterates through each file.
-
 Copies files into Azure Blob Storage (Raw Layer).
 
 Step 3 – Lookup Stored Procedure (New File Check)
-
 Calls a stored procedure.
-
 Identifies files with status = 'New'.
 
 Step 4 – ForEach + Wait + Databricks Decryption
-
 Iterates only over new files.
-
 Wait condition ensures dependency control.
-
 Azure Databricks decrypts password-protected files.
-
 Decrypted file is stored in processed layer.
 
 Step 5 – Update File Status
-
 Lookup/Stored Procedure updates file status:
-
 copyToBlob
-
 copyToDB
 
 Step 6 – Load to Database
-
 Data is loaded into structured tables.
 
 Step 7 – Reporting Layer
-
 Power BI connects to database.
-
 Reports automatically reflect latest processed data.
-
 
 🛠️ Tech Stack
 
