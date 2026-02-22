@@ -1,4 +1,5 @@
 🚀 ADF SFTP to Blob to DB ETL Pipeline (Metadata-Driven)
+
 📌 Project Overview
 
 This project demonstrates a metadata-driven Azure Data Factory (ADF) pipeline that:
@@ -17,9 +18,10 @@ Feeds downstream Power BI reports
 
 This design ensures automation, scalability, and controlled file processing.
 
+
 🏗️ Architecture Diagram
 
-(You will paste the diagram image here — I’ll explain below how to create it.)
+
 
 🔄 End-to-End Flow Explanation
 Step 1 – Get Metadata from SFTP
@@ -68,6 +70,7 @@ Power BI connects to database.
 
 Reports automatically reflect latest processed data.
 
+
 🛠️ Tech Stack
 
 Azure Data Factory
@@ -82,6 +85,7 @@ Power BI
 
 Stored Procedures (Metadata Control)
 
+
 🧠 Key Design Concepts
 
 Metadata-driven architecture
@@ -94,7 +98,9 @@ Secure handling of encrypted files
 
 Automated reporting integration
 
+
 📈 Learning Outcomes
+
 
 Designed complex control flow using ForEach & Lookup
 
