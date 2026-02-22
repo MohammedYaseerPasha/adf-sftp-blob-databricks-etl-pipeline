@@ -1,8 +1,8 @@
-🚀 ADF SFTP to Blob to DB ETL Pipeline (Metadata-Driven)
+🚀 ADF SFTP to Blob to DB ETL Pipeline (Metadata-Driven Automation)
 
 📌 Project Overview
 
-This project demonstrates a metadata-driven Azure Data Factory (ADF) pipeline that:
+This project demonstrates a Automated metadata-driven Azure Data Factory (ADF) pipeline that:
 Ingests files from SFTP
 Stores them in Azure Blob Storage
 Identifies new files using a Stored Procedure
